@@ -1,0 +1,36 @@
+GridLayout:
+    cols: 1
+    size_hint: (0.6, 0.7)
+    pos_hint: {"center_x": 0.5, "center_y":0.5}
+    lbl:my_label
+
+    Image:
+        id: imagem1
+        source: "Logo.png"
+        size_hint: 1, 4
+
+    TextInput:
+        id: caixa
+        multiline: False
+        font_size: 18
+        size_hint: 1, 0.5
+        on_text: app.process()
+
+    Button:
+        id: botao
+        text: 'Pesquisa'
+        font_size: 18
+        size_hint: 1, 0.5
+        bold: True
+        on_press: app.pegar_cep()
+
+    Label:
+        id: my_label
+        text: ''
+        font_size: 30
+
+    Label:
+        id: erro
+        text: ''
+        color: [0, 84, 80, 19]
+        font_size: 22
